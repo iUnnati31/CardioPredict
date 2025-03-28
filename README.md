@@ -16,7 +16,7 @@ CardioPredict is a machine learning-based application designed to assess heart h
 ## 🚀 How to Run
 ```bash
 # Clone the repository
-git clone https://github.com/username/CardioPredict.git
+git clone https://github.com/iUnnati31/CardioPredict.git
 
 # Install dependencies
 pip install -r requirements.txt
@@ -34,6 +34,4 @@ streamlit run main.py
 - **main.py**: Streamlit app for UI and prediction logic.
 - **heart.pkl**: Trained machine learning model.
 
-## 🙌 Acknowledgments
-Inspired by healthcare innovations and machine learning advancements.
 
