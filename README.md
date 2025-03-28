@@ -1,4 +1,4 @@
-# CardioPredict 💓
+# CardioPredict 
 
 CardioPredict is a machine learning-based application designed to assess heart health and predict the risk of a heart attack. Built using Streamlit, the app provides a user-friendly interface for inputting health metrics and generating predictions based on trained machine learning models.
 
