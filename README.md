@@ -25,6 +25,16 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
+## 🐳 Run via Docker
+```bash
+# Pull the Docker image
+docker pull unnatiag31/cardiopredict
+
+# Run the container
+docker run -p 8501:8501 unnatiag31/cardiopredict
+```
+Docker Hub Repository: CardioPredict on Docker Hub[https://hub.docker.com/repository/docker/unnatiag31/cardiopredict/general]
+
 ## 🎮 Usage
 1. Input health metrics such as age, cholesterol, blood pressure, etc.
 2. Click 'Analyze Heart Health Risk' to get a prediction.
