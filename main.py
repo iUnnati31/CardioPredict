@@ -103,8 +103,18 @@ def load_model():
 model = load_model()
 
 # Function to make predictions
+# --- FIX: Convert input to DataFrame with correct dtypes ---
 def predict_heart_attack(features):
-    prediction = model.predict([features])
+    columns = ['age', 'sex', 'cp', 'trtbps', 'chol', 'fbs', 'restecg', 'thalachh', 'exng', 'caa']
+    # Set correct categories for categorical columns
+    input_df = pd.DataFrame([features], columns=columns)
+    input_df['sex'] = pd.Categorical(input_df['sex'], categories=[0,1])
+    input_df['cp'] = pd.Categorical(input_df['cp'], categories=[0,1,2,3])
+    input_df['fbs'] = pd.Categorical(input_df['fbs'], categories=[0,1])
+    input_df['restecg'] = pd.Categorical(input_df['restecg'], categories=[0,1,2])
+    input_df['exng'] = pd.Categorical(input_df['exng'], categories=[0,1])
+    input_df['caa'] = pd.Categorical(input_df['caa'], categories=[0,1,2,3,4])
+    prediction = model.predict(input_df)
     return prediction[0]
 
 # Sidebar for feature explanations
